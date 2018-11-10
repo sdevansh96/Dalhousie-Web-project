@@ -1,0 +1,13 @@
+<% include partials/header.ejs %>
+<div style="background-image: url('/Colors\ Of\ Sky.jpg');"> 
+<div class="container">
+<h1>Sign In</h1>
+<form action="/user/signin" method="POST">
+    <input type=text placeholder="User Name" name="username"><br/>
+    <input type="text" placeholder="password" name="password"><br/>
+    <input type="submit">    
+
+</form>
+</div>
+</div>
+<% include partials/fotter.ejs %>

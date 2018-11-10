@@ -1,0 +1,24 @@
+<% include partials/header.ejs %>
+<div class="container"> 
+<h1>Edit <%= place.title %></h1>
+
+<form action="/explore/<%=place._id%>/editplace?method=PUT" method="POST">
+       <div class="form-group">
+          <label for="title">Name of The Place</label>
+          <input type=text class="form-control" id="title" name="place[title]" value="<%=place.title %>">
+          </div>
+           <div class="form-group">
+          <label for="image">Image Url</label>
+          <input type="text" class="form-control" id="image" name=place[image] value= "<%= place.image %>">
+           </div>
+          <div class="form-group">
+            <label for="description">Details of the Place</label>
+            <input type="text" class="form-control" id="image" name=place[description] value="<%= place.description %>">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+</form>
+</div>
+<% include partials/fotter.ejs %>

@@ -1,0 +1,15 @@
+<% include partials/header %>
+<div class="container text-center">
+<h1><%=place.title %> </h1>
+<h3>Share your experience</h3>
+<form action="/explore/<%=place._id %>/comment/post" method="POST">
+    <div class="form-group">
+        <label for="comment">Add Comment:</label>
+        <textarea class="form-control" name="place[comment]"> </textarea>  
+      
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+<% include partials/fotter %>

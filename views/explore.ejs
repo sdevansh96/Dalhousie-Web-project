@@ -1,0 +1,24 @@
+<% include partials/header.ejs %>
+
+<div class="container-fluid ml-5 text-center" > 
+<h1 class="mb-5 p-2">Famous Tourist Places in Dalhousie</h1>
+
+
+    <div class="row  justify-content-around ">
+
+      <% place.forEach(function(places){ %>
+      <div class="col-sm-12 col-md-6 col-lg-4 mb-5" >
+        <div class="card bg-light"  style="width: 20em;">
+            <img class="card-img-top text-center" src="/<%= places.image %>" alt="Card image cap">
+            <div class="card-body text-center">
+              <h5 class="card-title"><%= places.title %></h5>
+               <a href="/explore/<%= places._id %>/info" class="btn btn-primary">More-Info</a>
+            </div>
+          </div>
+      </div>
+   <% }) %>
+    </div>
+  </div>
+
+
+<% include partials/fotter.ejs %>

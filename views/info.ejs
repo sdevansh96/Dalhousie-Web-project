@@ -1,0 +1,37 @@
+<% include partials/header.ejs %>
+<div style="background-image: url('/Colors\ Of\ Sky.jpg');"> 
+<div class="container-fluid">
+    
+  <div class="row justify-content-end">
+    
+    <div class="col-sm-6">
+        
+        <img  src="/<%= place.image %>"  alt="image" class="img-thumbnail p-0">
+        <h1> <%=place.title %> </h1>
+        <p class="card-text"> <h5> <%= place.description %></h5></p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <h3><a href="/explore/<%=place._id %>/info/edit-place">Edit</a></h3>
+      
+    </div>
+    </div>
+    <div class="row justify-content-end">
+        <div class="col-sm-6 bg-light">
+    <h1 >Comment Section <a href="/explore/<%=place._id %>/comment" class="btn btn-danger">Add Comment</a></h1>
+
+      <% place.comments.forEach(function(comment){ %>
+        <p> <b><%= comment.author.username %> -</b> <%= comment.comment %> 
+          <h6><a href="/explore/<%=place._id %>/<%=comment._id %>/commentedit">edit</a></h6></p>
+ 
+      <% }); %>
+    </div>
+ 
+    </div>
+</div>
+</div>
+<% include partials/fotter.ejs %>
+
+
+
+
+
+  
