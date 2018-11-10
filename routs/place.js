@@ -103,4 +103,7 @@ function isLogIn( req ,res,next){
     }
     res.redirect("/user/signin")
 }
+router.get("*",function(req,res){
+    res.redirect("/home")
+})
 module.exports=router;
